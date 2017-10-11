@@ -40,7 +40,7 @@ const Plugins = Backbone.Collection.extend({
     const that = this;
     return r.plugins.map(plugin => {
       let updates = [
-        that._getLastWithStatus(plugin.updates, 'COMPATIBLE'),
+        that._getLastWithStatus(plugin.updates, 'INCOMPATIBLE'),
         that._getLastWithStatus(plugin.updates, 'REQUIRES_SYSTEM_UPGRADE'),
         that._getLastWithStatus(plugin.updates, 'DEPS_REQUIRE_SYSTEM_UPGRADE')
       ].filter(update => update);
